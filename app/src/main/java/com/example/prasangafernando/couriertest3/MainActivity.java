@@ -6,21 +6,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 EditText UsernameEt, PasswordEt;
-    Button btnShowLocation;
-    GPSTracker gps;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         UsernameEt = (EditText)findViewById(R.id.etUserName);
         PasswordEt = (EditText)findViewById(R.id.etPassword);
-
-        //Location code starts from here.
 
     }
 
@@ -33,6 +29,6 @@ public void onLogin(View view){
     backgroundWorker.execute(type, username, password);
 }
     public void openReg(View view){
-        startActivity(new Intent(this, Register.class));
+        startActivity(new Intent(this, SendData.class));
     }
-}//only one brace
+}

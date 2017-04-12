@@ -1,8 +1,17 @@
 package com.example.prasangafernando.couriertest3;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.provider.Settings;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -22,6 +31,7 @@ import java.net.URLEncoder;
 public class BackgroundWorker extends AsyncTask<String, Void, String> {
     Context context;
     AlertDialog alertDialog;
+
     BackgroundWorker (Context ctx){
         context = ctx;
     }
@@ -115,13 +125,28 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
     }
 
     @Override
-    protected void onPostExecute(String result) {
+    public void onPostExecute(String result) {
        alertDialog.setMessage(result);
         alertDialog.show();
+
+        //My edited code starts here
+      /*  if(result.equals("login success!")){
+            alertDialog.setMessage("User is in");
+            alertDialog.show();*/
+           Intent intent = new Intent(context, SendData.class);
+            context.startActivity(intent);
+            ((Activity)context).finish();
+       // }
     }
+
 
     @Override
     protected void onProgressUpdate(Void... values) {
         super.onProgressUpdate(values);
     }
+
+
+
 }
+
+

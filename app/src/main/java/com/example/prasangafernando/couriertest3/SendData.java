@@ -9,26 +9,46 @@ import android.widget.Toast;
 
 import static com.example.prasangafernando.couriertest3.R.id.et_latitude;
 
-public class Register extends AppCompatActivity {
+public class SendData extends AppCompatActivity {
     EditText name, surname;
-    Button btnShowLocation;
+   // Button btnShowLocation;
     GPSTracker gps;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_location);
         name = (EditText)findViewById(et_latitude);
         surname = (EditText) findViewById(R.id.et_longitude);
 
 
+
+        gps = new GPSTracker(SendData.this);
+
+        if(gps.canGetLocation()){
+            double latitude = gps.getLatitude();
+            double longitude = gps.getLongitude();
+
+            Toast.makeText(getApplicationContext(),
+                    "Your Location is:\nLat: "+latitude+"\nLong: "+longitude, Toast.LENGTH_LONG).show();
+
+            name.setText(String.valueOf(latitude));
+            surname.setText(String.valueOf(longitude));
+
+        }else{
+            gps.showSettingsAlert();
+        }
+   /*
         //Location code starts here
         btnShowLocation = (Button) findViewById(R.id.btn_getLocation);
         btnShowLocation.setOnClickListener(new View.OnClickListener() {
-            @Override
+
+
+
+         @Override
             public void onClick(View v) {
-                gps = new GPSTracker(Register.this);
+                gps = new GPSTracker(SendData.this);
 
                 if(gps.canGetLocation()){
                     double latitude = gps.getLatitude();
@@ -36,9 +56,7 @@ public class Register extends AppCompatActivity {
 
                     Toast.makeText(getApplicationContext(),
                             "Your Location is:\nLat: "+latitude+"\nLong: "+longitude, Toast.LENGTH_LONG).show();
-                   //String et_latitude = et_latitude
-                   /* name.setText((int) latitude);
-                    surname.setText((int) longitude);*/
+
                    name.setText(String.valueOf(latitude));
                     surname.setText(String.valueOf(longitude));
 
@@ -46,7 +64,7 @@ public class Register extends AppCompatActivity {
                     gps.showSettingsAlert();
                 }
             }
-        });
+        });*/
 
     }
     public void onReg(View view){
