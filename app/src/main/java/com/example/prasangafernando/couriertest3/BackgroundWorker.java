@@ -42,7 +42,7 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
         //String login_url = "http://10.0.2.2/Prasanga/newDB/login.php";
         String login_url = "https://firstandroid.000webhostapp.com/Courier_Service/login.php";
         //String register_url = "http://10.0.2.2/Prasanga/newDB/Registration.php";
-        String insert_url = "https://firstandroid.000webhostapp.com/Courier_Service/Insert.php";
+        String insert_url = "https://firstandroid.000webhostapp.com/Courier_Service/insert.php";
         if (type.equals("Login")) {
             try {
                 String user_name = params[1];
