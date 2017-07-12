@@ -80,8 +80,10 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
         }
         else if (type.equals("insert")){//Insert
             try {
-                String latitude = params[1];
-                String longitude = params[2];
+                String vID = params[1];
+                String latitude = params[2];
+                String longitude = params[3];
+
 
                 URL url = new URL(insert_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -90,8 +92,9 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream , "UTF-8"));
-                String post_data = URLEncoder.encode("latitude","UTF-8")+"="+URLEncoder.encode(latitude,"UTF-8")+"&"
-                    +URLEncoder.encode("longitude","UTF-8")+"="+URLEncoder.encode(longitude,"UTF-8");
+                String post_data = URLEncoder.encode("vehicle_ID","UTF-8")+"="+URLEncoder.encode(vID,"UTF-8")+"&"
+                        +URLEncoder.encode("latitude","UTF-8")+"="+URLEncoder.encode(latitude,"UTF-8")+"&"
+                        +URLEncoder.encode("longitude","UTF-8")+"="+URLEncoder.encode(longitude,"UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();

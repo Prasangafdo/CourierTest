@@ -10,19 +10,6 @@
     tools:context="com.example.prasangafernando.couriertest3.SendData">
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Send Location"
-        android:id="@+id/btn_send"
-        android:onClick="onReg"
-        android:layout_marginLeft="47dp"
-        android:layout_marginStart="47dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="75dp"
-        android:layout_below="@+id/et_longitude" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,8 +17,10 @@
         android:ems="10"
         android:id="@+id/et_latitude"
         android:hint="Latitude"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="53dp" />
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/et_vehicleID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -40,9 +29,10 @@
         android:ems="10"
         android:id="@+id/et_longitude"
         android:hint="Longitude"
+        android:layout_marginTop="23dp"
         android:layout_below="@+id/et_latitude"
-        android:layout_alignLeft="@+id/et_latitude"
-        android:layout_alignStart="@+id/et_latitude" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/btn_sendLocation"
@@ -50,20 +40,32 @@
         android:layout_height="wrap_content"
         android:onClick="onReg"
         android:text="Send GPS Location"
-        android:layout_marginTop="33dp"
-        android:layout_below="@+id/btn_getLocation"
-        android:layout_alignRight="@+id/btn_getLocation"
-        android:layout_alignEnd="@+id/btn_getLocation" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btn_getLocation"
+        android:layout_alignStart="@+id/btn_getLocation"
+        android:layout_marginBottom="75dp" />
 
     <Button
         android:id="@+id/btn_getLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:text="Recorrect Location"
-        android:layout_below="@+id/btn_send"
+        android:layout_above="@+id/btn_sendLocation"
         android:layout_alignRight="@+id/et_longitude"
         android:layout_alignEnd="@+id/et_longitude"
-        android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp" />
+        android:layout_marginRight="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/et_vehicleID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Vehicle ID"
+        android:inputType="textPersonName"
+        android:layout_marginTop="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

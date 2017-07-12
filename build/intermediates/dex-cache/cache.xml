@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="H:\RapidDeliveryMobile\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e7822c127a344b5ff037488cea94788c68f4248">
+        <dex dex="H:\RapidDeliveryMobile\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_0f6e4e4fa44007fda4c5d6e4e9af0a729a4ea5a8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="H:\RapidDeliveryMobile\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="H:\RapidDeliveryMobile\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_4ba1b57639f6920a0ccfe8470bd66ff839bfb3c3\classes.dex" />
+    </item>
+
+</items>

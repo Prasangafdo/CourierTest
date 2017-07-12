@@ -10,8 +10,8 @@ import android.widget.Toast;
 import static com.example.prasangafernando.couriertest3.R.id.et_latitude;
 
 public class SendData extends AppCompatActivity {
-    EditText name, surname;
-   // Button btnShowLocation;
+    EditText name, surname, vID;
+    Button btnShowLocation;
     GPSTracker gps;
 
 
@@ -21,7 +21,7 @@ public class SendData extends AppCompatActivity {
         setContentView(R.layout.activity_location);
         name = (EditText)findViewById(et_latitude);
         surname = (EditText) findViewById(R.id.et_longitude);
-
+        vID = (EditText) findViewById(R.id.et_vehicleID);
 
 
         gps = new GPSTracker(SendData.this);
@@ -39,8 +39,9 @@ public class SendData extends AppCompatActivity {
         }else{
             gps.showSettingsAlert();
         }
-   /*
+
         //Location code starts here
+        //Recorrects the location when the button is pressed.
         btnShowLocation = (Button) findViewById(R.id.btn_getLocation);
         btnShowLocation.setOnClickListener(new View.OnClickListener() {
 
@@ -64,16 +65,17 @@ public class SendData extends AppCompatActivity {
                     gps.showSettingsAlert();
                 }
             }
-        });*/
+        });
 
     }
     public void onReg(View view){
+        String  str_VID = vID.getText().toString();
         String str_lat =name.getText().toString();
         String  str_long =surname.getText().toString();
         String type = "insert";
 
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
-        backgroundWorker.execute(type, str_lat, str_long);
+        backgroundWorker.execute(type,str_VID , str_lat, str_long);
     }
    /* public void onsendLocation(View view){
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
