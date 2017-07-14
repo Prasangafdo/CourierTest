@@ -62,4 +62,5 @@ public class CompleteDeliveryActivity extends AppCompatActivity {
             }
         }
     }
+
 }

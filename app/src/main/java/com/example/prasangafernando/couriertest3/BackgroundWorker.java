@@ -40,9 +40,9 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
     protected String doInBackground(String ... params) {
         String type = params[0];
         //String login_url = "http://10.0.2.2/Prasanga/newDB/login.php";
-        String login_url = "https://firstandroid.000webhostapp.com/Courier_Service/login.php";
+        String login_url = "https://firstandroid.000webhostapp.com/login.php";
         //String register_url = "http://10.0.2.2/Prasanga/newDB/Registration.php";
-        String insert_url = "https://firstandroid.000webhostapp.com/Courier_Service/insert.php";
+        String insert_url = "https://firstandroid.000webhostapp.com/insert.php";
         if (type.equals("Login")) {
             try {
                 String user_name = params[1];
