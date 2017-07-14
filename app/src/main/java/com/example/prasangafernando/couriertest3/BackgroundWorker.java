@@ -136,7 +136,7 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
       /*  if(result.equals("login success!")){
             alertDialog.setMessage("User is in");
             alertDialog.show();*/
-           Intent intent = new Intent(context, SendData.class);
+           Intent intent = new Intent(context, LoggedActivity.class);
             context.startActivity(intent);
             ((Activity)context).finish();
        // }
