@@ -78,20 +78,6 @@ public class SendData extends AppCompatActivity {
             }
         });
 
-        //Qr
-        scanbtn = (Button) findViewById(R.id.scanbtn);
-        result = (TextView) findViewById(R.id.result);
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST);
-        }
-        scanbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SendData.this, ScanActivity.class);
-                startActivityForResult(intent, REQUEST_CODE);
-            }
-        });
-
     }
     public void onReg(View view){
         String  str_VID = vID.getText().toString();
@@ -103,25 +89,7 @@ public class SendData extends AppCompatActivity {
         backgroundWorker.execute(type,str_VID , str_lat, str_long);
     }
 
-    public void buttonClick(View view){
-        Intent mintent = new Intent(SendData.this, SecondActivity.class);
-        startActivity(mintent);
-    }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode == REQUEST_CODE && resultCode == RESULT_OK){
-            if(data != null){
-                final Barcode barcode = data.getParcelableExtra("barcode");
-                result.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        result.setText(barcode.displayValue);
-                    }
-                });
-            }
-        }
-    }
    /* public void onsendLocation(View view){
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.execute(type, str_lat, str_long);//need to pass the location

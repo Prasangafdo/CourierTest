@@ -19,7 +19,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".SendData" />
-        <activity android:name=".SecondActivity" />
         <activity android:name=".ScanActivity" />
         <activity android:name=".LoggedActivity" />
         <activity android:name=".SwitchVehiclesActivity" />
