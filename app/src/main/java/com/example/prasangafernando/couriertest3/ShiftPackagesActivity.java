@@ -26,6 +26,8 @@ public class ShiftPackagesActivity extends AppCompatActivity {
 
     Button scanbtn;
     TextView result;
+    EditText et_TPcourierID;
+    EditText et_TPvehicleID;
     public static final int REQUEST_CODE = 100;
     public static final int PERMISSION_REQUEST = 200;
 
@@ -36,6 +38,10 @@ public class ShiftPackagesActivity extends AppCompatActivity {
 
         scanbtn = (Button) findViewById(R.id.btn_scan);
         result = (TextView) findViewById(R.id.result);
+        et_TPcourierID =(EditText) findViewById(R.id.et_TPcourierID);
+        et_TPvehicleID = (EditText) findViewById(R.id.et_TPvehicleID);
+
+
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, PERMISSION_REQUEST);
         }
@@ -63,5 +69,16 @@ public class ShiftPackagesActivity extends AppCompatActivity {
                 });
             }
         }
+    }
+
+   public void onTransferParcel(View view){
+
+        String str1 = et_TPcourierID.getText().toString();
+        String  str2 =et_TPvehicleID.getText().toString();
+        String type = "TransferParcel";
+        String ParcelID = result.getText().toString();
+
+        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+        backgroundWorker.execute(type,str1 , str2, ParcelID);
     }
 }

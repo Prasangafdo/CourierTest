@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvParcelID"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
-        android:text="Scan QR code"
+        android:layout_marginTop="36dp"
+        android:text="Scan Parcel ID"
         tools:layout_editor_absoluteX="119dp"
         tools:layout_editor_absoluteY="140dp" />
 
@@ -21,12 +21,14 @@
         android:id="@+id/tvParcelID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteY="85dp"
-        tools:layout_editor_absoluteX="142dp"
+        android:layout_alignEnd="@+id/btnDeliver"
+        android:layout_alignLeft="@+id/btnDeliver"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp" />
+        android:layout_alignRight="@+id/btnDeliver"
+        android:layout_alignStart="@+id/btnDeliver"
+        android:layout_marginTop="150dp"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="85dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,11 +41,12 @@
         android:text="Parcel ID: " />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnDeliver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnScanCode"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="29dp"
-        android:text="Mark as Delivered" />
+        android:text="Mark as Delivered"
+        android:onClick="onDeliver"/>
 </RelativeLayout>

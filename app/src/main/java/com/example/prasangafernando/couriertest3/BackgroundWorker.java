@@ -39,11 +39,15 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
     @Override
     protected String doInBackground(String ... params) {
         String type = params[0];
-        //String login_url = "http://10.0.2.2/Prasanga/newDB/login.php";
+        //String login_url = "http://10.0.2.2/Prasanga/newDB/login.php";//Uncomment these if you're using in localhost
         String login_url = "https://firstandroid.000webhostapp.com/login.php";
         //String register_url = "http://10.0.2.2/Prasanga/newDB/Registration.php";
         String insert_url = "https://firstandroid.000webhostapp.com/insert.php";
-        if (type.equals("Login")) {
+        String switchVehicle_url = "https://firstandroid.000webhostapp.com/switchVehicle.php";
+        String transferParcel_url = "https://firstandroid.000webhostapp.com/transferParcel.php";
+        String completeDelivery_url = "https://firstandroid.000webhostapp.com/completeDelivery.php";
+
+        if (type.equals("Login")) { //Login
             try {
                 String user_name = params[1];
                 String password = params[2];
@@ -78,7 +82,7 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
             }
 
         }
-        else if (type.equals("insert")){//Insert
+        else if (type.equals("insert")){// Send Location
             try {
                 String vID = params[1];
                 String latitude = params[2];
@@ -95,6 +99,117 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                 String post_data = URLEncoder.encode("vehicle_ID","UTF-8")+"="+URLEncoder.encode(vID,"UTF-8")+"&"
                         +URLEncoder.encode("latitude","UTF-8")+"="+URLEncoder.encode(latitude,"UTF-8")+"&"
                         +URLEncoder.encode("longitude","UTF-8")+"="+URLEncoder.encode(longitude,"UTF-8");
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String result= "";
+                String line= "";
+                while ((line = bufferedReader.readLine())!=null){
+                    result+=line;
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return result;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+      else  if (type.equals("switchVehicle")) { //Switch the courier vehicle
+            try {
+                String vehicleID = params[1];
+                String courierID = params[2];
+                URL url = new URL(switchVehicle_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream , "UTF-8"));
+                String post_data = URLEncoder.encode("vehicleID","UTF-8")+"="+URLEncoder.encode(vehicleID,"UTF-8")+"&"
+                        +URLEncoder.encode("courierID","UTF-8")+"="+URLEncoder.encode(courierID,"UTF-8");
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String result= "";
+                String line= "";
+                while ((line = bufferedReader.readLine())!=null){
+                    result+=line;
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return result;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+
+         else if (type.equals("TransferParcel")){//transfer a parcel to another vehicle
+                try {
+                    String courierID = params[1];
+                    String vehicleID = params[2];
+                    String parcelID = params[3];
+
+
+                    URL url = new URL(transferParcel_url);
+                    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                    httpURLConnection.setRequestMethod("POST");
+                    httpURLConnection.setDoOutput(true);
+                    httpURLConnection.setDoInput(true);
+                    OutputStream outputStream = httpURLConnection.getOutputStream();
+                    BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream , "UTF-8"));
+                    String post_data = URLEncoder.encode("vehicleID","UTF-8")+"="+URLEncoder.encode(vehicleID,"UTF-8")+"&"
+                            +URLEncoder.encode("courierID","UTF-8")+"="+URLEncoder.encode(courierID,"UTF-8")+"&"
+                            +URLEncoder.encode("parcelID","UTF-8")+"="+URLEncoder.encode(parcelID,"UTF-8");
+                    bufferedWriter.write(post_data);
+                    bufferedWriter.flush();
+                    bufferedWriter.close();
+                    outputStream.close();
+                    InputStream inputStream = httpURLConnection.getInputStream();
+                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                    String result= "";
+                    String line= "";
+                    while ((line = bufferedReader.readLine())!=null){
+                        result+=line;
+                    }
+                    bufferedReader.close();
+                    inputStream.close();
+                    httpURLConnection.disconnect();
+                    return result;
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+        }
+
+ else if (type.equals("completeDelivery")){//Complete Delivery
+            try {
+                String parcelID = params[1];
+
+                URL url = new URL(completeDelivery_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream , "UTF-8"));
+                String post_data = URLEncoder.encode("parcelID","UTF-8")+"="+URLEncoder.encode(parcelID,"UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();

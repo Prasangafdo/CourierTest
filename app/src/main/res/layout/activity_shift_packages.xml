@@ -13,7 +13,7 @@
         android:layout_below="@+id/result"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="39dp"
-        android:text="Scan QR code"
+        android:text="Scan parcel ID"
         tools:layout_editor_absoluteX="146dp"
         tools:layout_editor_absoluteY="210dp" />
 
@@ -43,14 +43,14 @@
         android:text="Name" />
 
     <EditText
-        android:id="@+id/et_courierID"
+        android:id="@+id/et_TPcourierID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Courier ID" />
+        android:hint="Courier ID"
+        android:inputType="textPersonName" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -61,16 +61,29 @@
         android:layout_marginLeft="11dp"
         android:layout_marginStart="11dp"
         android:layout_marginTop="13dp"
-        android:text="Vehicle ID"
-        android:layout_toStartOf="@+id/et_courierID"
-        android:layout_toLeftOf="@+id/et_courierID" />
+        android:text="Parcel ID" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnTransferpkg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_scan"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:text="Move Package" />
+        android:text="Transfer Package"
+        android:onClick="onTransferParcel"/>
+
+    <EditText
+        android:id="@+id/et_TPvehicleID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_TPcourierID"
+        android:layout_alignStart="@+id/et_TPcourierID"
+        android:layout_below="@+id/et_TPcourierID"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="Vehicle ID"
+        android:inputType="textPersonName" />
+
+
 </RelativeLayout>

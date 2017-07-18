@@ -26,6 +26,7 @@ public class CompleteDeliveryActivity extends AppCompatActivity {
 
     Button scanbtn;
     TextView tvParcelID;
+
     public static final int REQUEST_CODE = 100;
     public static final int PERMISSION_REQUEST = 200;
 
@@ -61,6 +62,14 @@ public class CompleteDeliveryActivity extends AppCompatActivity {
                 });
             }
         }
+    }
+    public void onDeliver(View view){
+
+        String str_parcelID = tvParcelID.getText().toString();
+        String type = "completeDelivery";
+
+        BackgroundWorker backgroundWorker = new BackgroundWorker(this);
+        backgroundWorker.execute(type, str_parcelID);
     }
 
 }

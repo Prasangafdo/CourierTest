@@ -34,11 +34,11 @@
         android:id="@+id/btnShiftPackages"
         android:layout_width="191dp"
         android:layout_height="43dp"
-        android:text="Shift Packages"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="284dp"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:text="Transfer Packages"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="284dp" />
 
     <Button
         android:id="@+id/btnCompleteDelivery"
