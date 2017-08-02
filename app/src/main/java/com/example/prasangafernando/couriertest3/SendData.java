@@ -1,11 +1,6 @@
 package com.example.prasangafernando.couriertest3;
 
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -13,16 +8,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.vision.barcode.Barcode;
-
 import static com.example.prasangafernando.couriertest3.R.id.et_latitude;
 
 public class SendData extends AppCompatActivity {
-    EditText name, surname, vID;
+    EditText vID, SVehicleID, SCourierID;
     Button btnShowLocation;
     GPSTracker gps;
     Button scanbtn;
     TextView result;
+    TextView name;
+    TextView surname;
     public static final int REQUEST_CODE = 100;
     public static final int PERMISSION_REQUEST = 200;
 
@@ -30,9 +25,12 @@ public class SendData extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
-        name = (EditText)findViewById(et_latitude);
-        surname = (EditText) findViewById(R.id.et_longitude);
+        name = (TextView)findViewById(et_latitude);
+        surname = (TextView) findViewById(R.id.et_longitude);
         vID = (EditText) findViewById(R.id.et_vehicleID);
+        SVehicleID =(EditText) findViewById(R.id.et_SvehicleID);
+        SCourierID = (EditText) findViewById(R.id.et_SCourierID);
+
 
 
         gps = new GPSTracker(SendData.this);
@@ -88,6 +86,7 @@ public class SendData extends AppCompatActivity {
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.execute(type,str_VID , str_lat, str_long);
     }
+
 
 
    /* public void onsendLocation(View view){

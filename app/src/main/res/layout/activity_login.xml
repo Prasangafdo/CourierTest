@@ -7,18 +7,31 @@
     android:paddingLeft="64dp"
     android:paddingRight="64dp"
     android:paddingTop="16dp"
+    android:background="@drawable/login">
+        <View
+        android:id="@+id/opacityFilter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="220dp"
+        android:background="@android:color/black"
+            android:alpha="0.28">
+        </View>
+
     tools:context="com.example.prasangafernando.couriertest3.MainActivity">
 
     <EditText
         android:id="@+id/etUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
         android:ems="10"
         android:hint="username"
         android:inputType="textPersonName"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:textColor="#fff"
+        android:textColorHint="#fff" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -30,7 +43,9 @@
         android:layout_marginTop="39dp"
         android:ems="10"
         android:hint="password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColorHint="#fff"
+        android:textColor="#fff"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -40,6 +55,48 @@
         android:onClick="onLogin"
         android:layout_below="@+id/etPassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="51dp" />
+        android:layout_marginTop="30dp" />
 
-  </RelativeLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:text="Rapid Delivery"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Login"
+        android:textColor="#ffe"
+        android:textSize="30sp"
+        android:background="@android:color/holo_red_dark"
+        android:alpha="0.6"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textSize="15dp"
+        android:textColor="#fff"
+        android:text="v3.0" />
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="47dp"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:text="Developed by: Prasanga Fernando" />
+
+
+</RelativeLayout>
