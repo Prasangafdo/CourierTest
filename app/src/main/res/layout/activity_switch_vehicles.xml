@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.prasangafernando.couriertest3.SwitchVehiclesActivity">
+
+    <EditText
+        android:id="@+id/et_SCourierID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Courier ID"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="57dp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/et_SvehicleID"
+        android:layout_alignStart="@+id/et_SvehicleID" />
+
+    <EditText
+        android:id="@+id/et_SvehicleID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/et_SCourierID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:ems="10"
+        android:hint="New Vehicle ID"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <Button
+        android:id="@+id/btn_SwitchVehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_SCourierID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp"
+        android:text="Switch Vehicle"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="231dp"
+        android:onClick="onSwitchVehicle"/>
+</RelativeLayout>

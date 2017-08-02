@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.prasangafernando.couriertest3.LoggedActivity"
+    android:background="@drawable/courier">
+
+
+    <android.support.percent.PercentRelativeLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoggedActivity"
+        android:alpha="0.78"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    <Button
+        android:id="@+id/btnSendLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:layout_marginTopPercent="25%"
+        android:text="Send Location"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/btnShiftPackages"
+        android:layout_alignEnd="@+id/btnShiftPackages"
+        android:layout_alignLeft="@+id/btnShiftPackages"
+        android:layout_alignStart="@+id/btnShiftPackages" />
+
+        <Button
+            android:id="@+id/btnShiftPackages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transfer Packages"
+            app:layout_marginTopPercent="10%"
+            android:layout_below="@+id/btnSendLocation"
+            android:layout_alignLeft="@+id/btnShiftVehicle"
+            android:layout_alignStart="@+id/btnShiftVehicle"
+            android:layout_alignRight="@+id/btnShiftVehicle"
+            android:layout_alignEnd="@+id/btnShiftVehicle" />
+
+
+        <Button
+        android:id="@+id/btnShiftVehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch between Vehicles"
+        app:layout_marginTopPercent="10%"
+        android:layout_below="@id/btnShiftPackages"
+
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:id="@+id/btnCompleteDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complete Delivery"
+        app:layout_marginTopPercent="10%"
+        android:layout_below="@+id/btnShiftVehicle"
+        android:layout_alignLeft="@+id/btnShiftVehicle"
+        android:layout_alignStart="@+id/btnShiftVehicle"
+        android:layout_alignRight="@+id/btnShiftVehicle"
+        android:layout_alignEnd="@+id/btnShiftVehicle" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#a04d1d16"
+            android:textColor="#ffffff"
+            app:layout_marginTopPercent="5%"
+            android:textSize="40dp"
+            android:text="Menu"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="51dp" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+</RelativeLayout>
