@@ -4,7 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.prasangafernando.couriertest3.SwitchVehiclesActivity">
+    tools:context="com.example.prasangafernando.couriertest3.SwitchVehiclesActivity"
+    android:background="@drawable/switch_vehicle">
+
+    <android.support.percent.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_marginTopPercent="35%">
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Switch Vehicle"
+        android:textColor="#bb10501c"
+        android:textSize="35dp"
+        app:layout_marginTopPercent="5%" />
+
+        <View
+            android:id="@+id/opacityFilter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_marginTopPercent="20%"
+            app:layout_marginBottomPercent="40%"
+            app:layout_marginLeftPercent="10%"
+            app:layout_marginRightPercent="10%"
+            android:background="@android:color/black"
+            android:alpha="0.2">
+        </View>
 
     <EditText
         android:id="@+id/et_SCourierID"
@@ -17,7 +49,9 @@
         tools:layout_editor_absoluteY="57dp"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/et_SvehicleID"
-        android:layout_alignStart="@+id/et_SvehicleID" />
+        android:layout_alignStart="@+id/et_SvehicleID"
+        android:textColor="#aaffffff"
+        android:textColorHint="#aaffffff"/>
 
     <EditText
         android:id="@+id/et_SvehicleID"
@@ -30,7 +64,9 @@
         android:hint="New Vehicle ID"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="139dp" />
+        tools:layout_editor_absoluteY="139dp"
+        android:textColor="#aaffffff"
+        android:textColorHint="#aaffffff"/>
 
     <Button
         android:id="@+id/btn_SwitchVehicle"
@@ -42,5 +78,7 @@
         android:text="Switch Vehicle"
         tools:layout_editor_absoluteX="115dp"
         tools:layout_editor_absoluteY="231dp"
-        android:onClick="onSwitchVehicle"/>
+        android:onClick="onSwitchVehicle"
+        android:alpha="0.73"/>
+    </android.support.percent.PercentRelativeLayout>
 </RelativeLayout>

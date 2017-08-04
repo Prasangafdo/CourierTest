@@ -4,41 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.prasangafernando.couriertest3.CompleteDeliveryActivity">
+    tools:context="com.example.prasangafernando.couriertest3.CompleteDeliveryActivity"
+    android:background="@drawable/delvcomplete">
 
-    <Button
-        android:id="@+id/btnScanCode"
+    <android.support.percent.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_marginTopPercent="35%">
+    <TextView
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvParcelID"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
-        android:text="Scan Parcel ID"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="140dp" />
+        android:gravity="center"
+        android:text="Complete Delivery"
+        android:textColor="#db182170"
+        android:textSize="35dp"
+        app:layout_marginTopPercent="5%" />
+
 
     <TextView
         android:id="@+id/tvParcelID"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/btnDeliver"
+        android:layout_height="30dp"
         android:layout_alignLeft="@+id/btnDeliver"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/btnDeliver"
         android:layout_alignStart="@+id/btnDeliver"
         android:layout_marginTop="150dp"
         tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="85dp" />
+        tools:layout_editor_absoluteY="85dp"
+        android:hint="Parcel ID"
+        android:background="#000"
+        android:alpha="0.75"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:gravity="center"
+        android:layout_alignRight="@+id/btnScanCode"
+        android:layout_alignEnd="@+id/btnScanCode" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/tvParcelID"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:layout_toLeftOf="@+id/btnScanCode"
-        android:layout_toStartOf="@+id/btnScanCode"
-        android:text="Parcel ID: " />
 
     <Button
         android:id="@+id/btnDeliver"
@@ -48,5 +55,23 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="29dp"
         android:text="Mark as Delivered"
-        android:onClick="onDeliver"/>
+        android:onClick="onDeliver"
+        android:alpha="0.7"/>
+
+        <Button
+            android:id="@+id/btnScanCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:text="Scan Parcel ID"
+            tools:layout_editor_absoluteX="119dp"
+            tools:layout_editor_absoluteY="140dp"
+            android:layout_alignTop="@+id/tvParcelID"
+            android:layout_alignLeft="@+id/btnDeliver"
+            android:layout_alignStart="@+id/btnDeliver"
+            android:layout_alignRight="@+id/btnDeliver"
+            android:layout_alignEnd="@+id/btnDeliver"
+            android:alpha="0.7"/>
+
+    </android.support.percent.PercentRelativeLayout>
 </RelativeLayout>

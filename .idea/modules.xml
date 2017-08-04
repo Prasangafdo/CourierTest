@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/RapidDeliveryMobile.iml" filepath="$PROJECT_DIR$/RapidDeliveryMobile.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rollbacked.iml" filepath="$PROJECT_DIR$/rollbacked.iml" />
     </modules>
   </component>
 </project>

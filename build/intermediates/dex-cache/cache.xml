@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="F:\Music\RapidDelivery2.9new\rollbacked\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Prasanga Fernando\StudioProjects\Gitclone\RapidDeliveryMobile\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="F:\Music\RapidDelivery2.9new\rollbacked\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_4c377b90badf59313b130e91862ff8a87d41ebbb\classes.dex" />
+        <dex dex="C:\Users\Prasanga Fernando\StudioProjects\Gitclone\RapidDeliveryMobile\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_794134e7c774628114e645c056c796b8c7a69b82\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="F:\Music\RapidDelivery2.9new\rollbacked\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\Prasanga Fernando\StudioProjects\Gitclone\RapidDeliveryMobile\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="551224c13029c66801cd65dea36f39d8824790f2">
-        <dex dex="F:\Music\RapidDelivery2.9new\rollbacked\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4dbd1eaa0e16744f8a11d9436e7588b6095c43ee\classes.dex" />
+        sha1="3ae3bbb1c8f4aaafeb537bc20c719148f911e03b">
+        <dex dex="C:\Users\Prasanga Fernando\StudioProjects\Gitclone\RapidDeliveryMobile\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_7fc71b358513383fc2c2dfd8a82c0ec086cdb516\classes.dex" />
     </item>
 
 </items>
