@@ -7,19 +7,6 @@
     tools:context="com.example.prasangafernando.couriertest3.ShiftPackagesActivity"
     android:background="@drawable/transfer">
 
-    <!--<android.support.percent.PercentRelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/transfer"
-        tools:context="com.example.prasangafernando.couriertest3.SendData">-->
-
-
-
-
-
     <android.support.percent.PercentRelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -50,19 +37,33 @@
             android:alpha="0.2">
         </View>
 
-        <EditText
-            android:id="@+id/et_TPcourierID"
+        <TextView
+            android:id="@+id/et_TPcourierID1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Courier ID"
-            android:inputType="textPersonName"
+            android:hint="Courier ID: "
             android:layout_marginTop="50dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             app:layout_marginTopPercent="25%"
             android:textColor="#aaffffff"
-            android:textColorHint="#aaffffff"/>
+            android:textColorHint="#aaffffff"
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/et_TPcourierID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint=""
+            android:layout_marginTop="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="25%"
+            app:layout_marginLeftPercent="90%"
+            android:textColor="#aaffffff"
+            android:textColorHint="#aaffffff"
+            android:textSize="20dp"/>
 
         <EditText
             android:id="@+id/et_TPvehicleID"
@@ -72,11 +73,12 @@
             android:hint="Vehicle ID"
             android:inputType="textPersonName"
             android:layout_marginTop="37dp"
-            android:layout_below="@+id/et_TPcourierID"
-            android:layout_alignLeft="@+id/et_TPcourierID"
-            android:layout_alignStart="@+id/et_TPcourierID"
+            android:layout_below="@+id/et_TPcourierID1"
+            android:layout_alignLeft="@+id/et_TPcourierID1"
+            android:layout_alignStart="@+id/et_TPcourierID1"
             android:textColor="#aaffffff"
-            android:textColorHint="#aaffffff"/>
+            android:textColorHint="#aaffffff"
+            android:textSize="20dp"/>
 
         <TextView
             android:id="@+id/result"

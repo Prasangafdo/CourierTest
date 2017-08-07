@@ -38,26 +38,42 @@
             android:alpha="0.2">
         </View>
 
-    <EditText
-        android:id="@+id/et_SCourierID"
+    <TextView
+        android:id="@+id/et_SCourierID1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Courier ID"
-        android:inputType="textPersonName"
+        android:hint="Courier ID: "
         tools:layout_editor_absoluteX="74dp"
         tools:layout_editor_absoluteY="57dp"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/et_SvehicleID"
         android:layout_alignStart="@+id/et_SvehicleID"
         android:textColor="#aaffffff"
-        android:textColorHint="#aaffffff"/>
+        android:textColorHint="#aaffffff"
+        android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/et_SCourierID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint=""
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="57dp"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/et_SvehicleID"
+            android:layout_alignStart="@+id/et_SvehicleID"
+            android:textColor="#aaffffff"
+            android:textColorHint="#aaffffff"
+            android:textSize="20dp"
+            app:layout_marginLeftPercent="30%"/>
 
     <EditText
         android:id="@+id/et_SvehicleID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/et_SCourierID"
+        android:layout_above="@+id/et_SCourierID1"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
         android:ems="10"
@@ -66,13 +82,14 @@
         tools:layout_editor_absoluteX="74dp"
         tools:layout_editor_absoluteY="139dp"
         android:textColor="#aaffffff"
-        android:textColorHint="#aaffffff"/>
+        android:textColorHint="#aaffffff"
+        android:textSize="20dp"/>
 
     <Button
         android:id="@+id/btn_SwitchVehicle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/et_SCourierID"
+        android:layout_below="@+id/et_SCourierID1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="89dp"
         android:text="Switch Vehicle"

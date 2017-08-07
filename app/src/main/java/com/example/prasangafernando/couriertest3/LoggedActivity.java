@@ -1,5 +1,6 @@
 package com.example.prasangafernando.couriertest3;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +12,7 @@ public class LoggedActivity extends AppCompatActivity {
     Button scanbtn;
     Button btnShiftVehicle;
     Button btnCompleteDelivery;
-
+    Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,11 @@ public class LoggedActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoggedActivity.this, SendData.class);
                 startActivity(intent);
+
+                GetID getVehicleID = new GetID(LoggedActivity.this);//Getting vehicleID ID from the database
+                String newType = "getVehicleID";
+                getVehicleID.execute(newType);
+
             }
 
         });
@@ -37,6 +43,10 @@ public class LoggedActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoggedActivity.this, ShiftPackagesActivity.class);
                 startActivity(intent);
+
+                GetID getCourierID = new GetID(LoggedActivity.this);//Getting courier ID from the database
+                String newType = "getUserID";
+                getCourierID.execute(newType);
             }
         });
 
@@ -47,6 +57,10 @@ public class LoggedActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoggedActivity.this, SwitchVehiclesActivity.class);
                 startActivity(intent);
+
+                GetID getCourierID = new GetID(LoggedActivity.this);//Getting courier ID from the database
+                String newType = "getUserID";
+                getCourierID.execute(newType);
             }
 
         });

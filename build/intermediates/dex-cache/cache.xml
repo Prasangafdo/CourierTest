@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Prasanga Fernando\StudioProjects\Gitclone\RapidDeliveryMobile\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Prasanga Fernando\StudioProjects\Gitclone\gitCloneRapid\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="C:\Users\Prasanga Fernando\StudioProjects\Gitclone\RapidDeliveryMobile\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_794134e7c774628114e645c056c796b8c7a69b82\classes.dex" />
+        <dex dex="C:\Users\Prasanga Fernando\StudioProjects\Gitclone\gitCloneRapid\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_d282722a68d7bce7a12c9ef0c8de8211fa621965\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Prasanga Fernando\StudioProjects\Gitclone\RapidDeliveryMobile\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\Prasanga Fernando\StudioProjects\Gitclone\gitCloneRapid\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="3ae3bbb1c8f4aaafeb537bc20c719148f911e03b">
-        <dex dex="C:\Users\Prasanga Fernando\StudioProjects\Gitclone\RapidDeliveryMobile\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_7fc71b358513383fc2c2dfd8a82c0ec086cdb516\classes.dex" />
+        sha1="1bf59674f1f24c6b0633ef7f0e5c91029d153340">
+        <dex dex="C:\Users\Prasanga Fernando\StudioProjects\Gitclone\gitCloneRapid\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_5e4c1010b6c97b16e287d048a8806ca255d8afd2\classes.dex" />
     </item>
 
 </items>

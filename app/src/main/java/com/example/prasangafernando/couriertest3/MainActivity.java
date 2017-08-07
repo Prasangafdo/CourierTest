@@ -1,7 +1,10 @@
 package com.example.prasangafernando.couriertest3;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
@@ -9,17 +12,13 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 EditText UsernameEt, PasswordEt;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         UsernameEt = (EditText)findViewById(R.id.etUserName);
         PasswordEt = (EditText)findViewById(R.id.etPassword);
-
     }
 
 public void onLogin(View view){
@@ -29,8 +28,12 @@ public void onLogin(View view){
 
     BackgroundWorker backgroundWorker = new BackgroundWorker(this);
     backgroundWorker.execute(type, username, password);
-}
-    public void openReg(View view){
-        startActivity(new Intent(this, SendData.class));
+
+    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);//Save
+    SharedPreferences.Editor editor = prefs.edit();
+    editor.putString("username",username); //InputString
+    editor.apply();
+
     }
 }
+

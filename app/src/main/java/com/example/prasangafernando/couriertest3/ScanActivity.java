@@ -63,7 +63,7 @@ public class ScanActivity extends AppCompatActivity {
 
             @Override
             public void surfaceDestroyed(SurfaceHolder holder) {
-
+                cameraSource.stop();
             }
         });
         barcode.setProcessor(new Detector.Processor<Barcode>() {
