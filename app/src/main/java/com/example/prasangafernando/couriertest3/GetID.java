@@ -103,6 +103,9 @@ public class GetID extends AsyncTask<String, Void, String> {
                  while ((line = bufferedReader.readLine())!=null){
                      result+=line;
                  }
+                 /////////////
+
+                 ////////////
                  SharedPreferences prefs1 = PreferenceManager.getDefaultSharedPreferences(this.context);//Save
                  SharedPreferences.Editor editor = prefs1.edit();
                  editor.putString("VID",result); //saving vehicle ID

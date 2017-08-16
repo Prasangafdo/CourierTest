@@ -47,10 +47,10 @@ public class ShiftPackagesActivity extends AppCompatActivity {
             }
         });
 
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);//Getting saved data
-        String data = prefs.getString("vehicleID", "vehicle ID not found");
-        TPcourierID.setText(data);
 
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);//Getting saved data
+        String data = prefs.getString("courierID", "Courier ID not found");
+        TPcourierID.setText(data);
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

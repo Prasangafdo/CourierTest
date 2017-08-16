@@ -74,10 +74,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/et_latitude"
-        android:hint="Latitude"
+        android:id="@+id/et_latitude1"
+        android:hint="Latitude:"
         app:layout_marginTopPercent="10%"
         android:layout_below="@+id/et_vehicleID"
         android:layout_alignParentLeft="true"
@@ -88,14 +87,30 @@
         android:textColorHint="#fff"
         android:layout_alignRight="@+id/et_vehicleID"
         android:layout_alignEnd="@+id/et_vehicleID" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/et_latitude"
+            android:hint="null"
+            app:layout_marginTopPercent="10%"
+            app:layout_marginLeftPercent="45%"
+            android:layout_below="@+id/et_vehicleID"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="54dp"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:layout_alignRight="@+id/et_vehicleID"
+            android:layout_alignEnd="@+id/et_vehicleID" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/et_longitude"
-        android:hint="Longitude"
+        android:id="@+id/et_longitude1"
+        android:hint="Longitude:"
         app:layout_marginTopPercent="10%"
         android:layout_below="@+id/et_latitude"
         android:layout_alignParentLeft="true"
@@ -106,6 +121,23 @@
         android:layout_alignRight="@+id/et_latitude"
         android:layout_alignEnd="@+id/et_latitude" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/et_longitude"
+            android:hint="null"
+            app:layout_marginTopPercent="10%"
+            app:layout_marginLeftPercent="45%"
+            android:layout_below="@+id/et_latitude"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:layout_alignRight="@+id/et_latitude"
+            android:layout_alignEnd="@+id/et_latitude" />
+
     <Button
         android:id="@+id/btn_sendLocation"
         android:layout_width="wrap_content"
@@ -113,7 +145,6 @@
         android:onClick="onReg"
         android:text="Send GPS Location"
         app:layout_marginTopPercent="10%"
-
         android:gravity="center"
         android:layout_marginTop="44dp"
         android:layout_below="@+id/btn_getLocation"
